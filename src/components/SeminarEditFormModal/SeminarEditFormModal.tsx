@@ -17,7 +17,6 @@ const SeminarEditFormModal: React.FC<SeminarEditFormType> = (props) => {
 
     useEscapeModalCloser(props.cancel)
 
-
     // Функция для преобразования формата даты для отображения в поле ввода
     const formatDateForInput = (dateStr: string): string => {
         const parts = dateStr.split(".")
@@ -28,7 +27,7 @@ const SeminarEditFormModal: React.FC<SeminarEditFormType> = (props) => {
         return dateStr
     }
 
-    // Функция для преобразования формата даты при редактировании
+    // Функция для преобразования формата даты при редактировании для отображения на странице
     const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newDate = e.target.value // Формат YYYY-MM-DD
         const parts = newDate.split("-")

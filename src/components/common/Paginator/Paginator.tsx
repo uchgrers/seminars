@@ -9,16 +9,16 @@ const Paginator = () => {
     const currentPage = useAppSelector(state => state.seminarsReducer.currentPage)
     const pageSize = useAppSelector(state => state.seminarsReducer.pageSize)
     const itemsCount = useAppSelector(state => state.seminarsReducer.seminarsCount)
-    const pages = Math.ceil(itemsCount / pageSize) || 1
+    const pages = Math.ceil(itemsCount / pageSize) || 1 // Количество страниц
 
-    useEffect(() => {
-        if (currentPage > pages) {
+    useEffect(() => { // Эффект для того, чтобы не возникало ситуаций, когда номер текущей страницы
+        if (currentPage > pages) { // оказывается больше количества страниц
             dispatch(changeCurrentPage(pages))
         }
     },[dispatch, currentPage, pageSize, itemsCount, pages])
 
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    useEffect(() => { // эффект для плавного поднятия вьюпорта на верх содержимого при
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); // переходе между страницами
     }, [currentPage])
 
     const onPageChange = (action: number) => {
@@ -29,8 +29,6 @@ const Paginator = () => {
     }
 
     const onPageSizeChange = (e: any) => {
-        console.log(pages)
-        console.log(currentPage)
         dispatch(changePageSize(e.target.value))
     }
 
