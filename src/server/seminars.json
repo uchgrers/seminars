@@ -1,0 +1,44 @@
+{
+  "seminars": [
+    {
+      "id": "3",
+      "title": "Технологии ухода за кожей",
+      "description": "Изучение современных методик ухода за кожей с применением новейших технологий.",
+      "date": "2025-02-28",
+      "time": "12:00",
+      "photo": "https://www.google.ru/imgres?q=free%20images&imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2015%2F04%2F23%2F22%2F00%2Fnew-year-background-736885_1280.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fphotos%2Ftree-sunset-clouds-sky-silhouette-736885%2F&docid=J7zy-dl2IZQspM&tbnid=aVgXecnmQ_f1MM&vet=12ahUKEwjRyLKIiKqLAxVAWEEAHcyuDfkQM3oECBsQAA..i&w=1280&h=797&hcb=2&ved=2ahUKEwjRyLKIiKqLAxVAWEEAHcyuDfkQM3oECBsQAA"
+    },
+    {
+      "id": "6",
+      "title": "Эффективные методики омоложения",
+      "description": "Обучение современным методикам омоложения и ухода за кожей.",
+      "date": "11.02.2025",
+      "time": "15:00",
+      "photo": "https://picsum.photos/id/6/750/730"
+    },
+    {
+      "id": "7",
+      "title": "Инновационные средства Kosmoteros",
+      "description": "Демонстрация новых продуктов Kosmoteros и их уникальных свойств.",
+      "date": "13.02.2025",
+      "time": "16:00",
+      "photo": "https://picsum.photos/id/7/750/730"
+    },
+    {
+      "id": "8",
+      "title": "Современные тренды в уходе за кожей",
+      "description": "Семинар о новейших трендах в уходе за кожей и эффективных методах лечения.",
+      "date": "15.02.2025",
+      "time": "17:00",
+      "photo": "https://picsum.photos/id/8/750/730"
+    },
+    {
+      "id": "10",
+      "title": "Будущее косметологии с Kosmoteros",
+      "description": "Обсуждение перспектив развития косметологии и роли инноваций.",
+      "date": "19.02.2025",
+      "time": "19:00",
+      "photo": "https://picsum.photos/id/10/750/730"
+    }
+  ]
+}

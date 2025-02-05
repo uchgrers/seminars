@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.48b08c07.css",
+    "main.js": "/static/js/main.a411ff83.js",
+    "static/media/SpaceGrotesk-Regular.woff2": "/static/media/SpaceGrotesk-Regular.7520e66995cb256e6ade.woff2",
+    "static/media/SpaceGrotesk-Medium.woff2": "/static/media/SpaceGrotesk-Medium.fd7abf4820021eb7fe0a.woff2",
+    "index.html": "/index.html",
+    "main.48b08c07.css.map": "/static/css/main.48b08c07.css.map",
+    "main.a411ff83.js.map": "/static/js/main.a411ff83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48b08c07.css",
+    "static/js/main.a411ff83.js"
+  ]
+}
