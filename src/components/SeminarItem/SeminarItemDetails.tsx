@@ -8,6 +8,7 @@ const SeminarItemDetails: React.FC<SeminarItemType> = (props) => {
     const [imgSrc, setImgSrc] = useState<string>(props.photo || placeholder)
     const [imgIsLoading, setImgIsLoading] = useState(true)
 
+    // Обновление фото при каждом редактировании URL
     useEffect(() => {
         if (!props.photo) {
             setImgSrc(placeholder)
@@ -31,10 +32,10 @@ const SeminarItemDetails: React.FC<SeminarItemType> = (props) => {
     }, [props.photo])
 
     return (
-        <section className={styles.item__body}>
+        <div className={styles.item__body}>
             <div className={styles.item__body_textBlock}>
                 <div className={styles.item__title}>
-                    <p>{props.title}</p>
+                    <h3>{props.title}</h3>
                 </div>
                 <div className={styles.item__description}>
                     <p>{props.description}</p>
@@ -51,7 +52,7 @@ const SeminarItemDetails: React.FC<SeminarItemType> = (props) => {
             ) : (
                 <img src={imgSrc} alt="Seminar" />
             )}
-        </section>
+        </div>
     );
 };
 

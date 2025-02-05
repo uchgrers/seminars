@@ -9,6 +9,9 @@ import SeminarItemDetails from "./SeminarItemDetails";
 import Preloader from "../common/Preloader/Preloader";
 
 const SeminarItem: React.FC<SeminarItemType> = (props) => {
+
+    const dispatch = useAppDispatch()
+
     const [seminarData, setSeminarData] = useState({
         id: props.id,
         title: '',
@@ -20,10 +23,10 @@ const SeminarItem: React.FC<SeminarItemType> = (props) => {
     const [isEditFormOpen, setIsEditFormOpen] = useState(false)
     const seminarsToBeRemoved = useAppSelector(state => state.seminarsReducer.seminarsToBeRemoved)
 
+    // Мемоизация массива элементов, которые в текущий момент удаляются
     const seminarIsRemoving = useMemo(() => {
         return seminarsToBeRemoved.includes(props.id)
     }, [seminarsToBeRemoved, props.id])
-    const dispatch = useAppDispatch()
 
     useEffect(() => {
         setSeminarData({
@@ -44,6 +47,7 @@ const SeminarItem: React.FC<SeminarItemType> = (props) => {
         e.preventDefault()
     }
 
+    // Функция отмены действия (в данном случае - закрытия модального окна)
     const cancel = () => {
         setIsEditFormOpen(false)
         setSeminarData({

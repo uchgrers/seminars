@@ -11,6 +11,9 @@ type UseItemsSelectorArgs = {
     pageSize: number
 }
 
+// Хук для реализации постраничного вывода элементов
+// Возвращает часть списка для указанной страницы
+
 export const usePaginatedSeminars = ({currentPage, pageSize}: UseItemsSelectorArgs): {seminars: Array<SeminarItemType>} => {
 
     const seminars = useAppSelector(state => state.seminarsReducer.seminars)
@@ -19,6 +22,8 @@ export const usePaginatedSeminars = ({currentPage, pageSize}: UseItemsSelectorAr
         return {seminars: seminars.slice((currentPage - 1) * pageSize, currentPage * pageSize)}
     }, [seminars, currentPage, pageSize])
 }
+
+// Хук для реализации функции отмены (закрытия модального окна) при нажатии на клавишу Escape
 
 export const useEscapeModalCloser = (cancel: (() => void) | undefined) => {
     useEffect(() => {

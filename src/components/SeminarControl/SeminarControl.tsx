@@ -17,7 +17,6 @@ const SeminarControl: React.FC<TodoControlType> = (props) => {
     const dispatch = useAppDispatch()
 
     const deleteItem = () => {
-        console.log(props.id)
         dispatch(removeSeminar(props.id))
         setConfirmDelete(false)
     }
