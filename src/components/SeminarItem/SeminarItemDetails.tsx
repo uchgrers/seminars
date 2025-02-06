@@ -8,14 +8,15 @@ const SeminarItemDetails: React.FC<SeminarItemType> = (props) => {
     const [imgSrc, setImgSrc] = useState<string>(props.photo || placeholder)
     const [imgIsLoading, setImgIsLoading] = useState(true)
 
-    // Обновление фото при каждом редактировании URL
     useEffect(() => {
+        // Установка placeholder вместо изображения, если оно не пришло в props
         if (!props.photo) {
             setImgSrc(placeholder)
             setImgIsLoading(false)
             return
         }
 
+        // Установка placeholder на время подгрузки изображения
         setImgIsLoading(true)
         const img = new Image()
         img.src = props.photo

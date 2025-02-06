@@ -28,7 +28,7 @@ const Paginator = () => {
         }
     }
 
-    const onPageSizeChange = (e: any) => {
+    const onPageSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         dispatch(changePageSize(e.target.value))
     }
 
