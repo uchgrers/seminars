@@ -1,16 +1,19 @@
+@import "src/styles/media";
+
 .confirm {
   position: fixed;
   z-index: 2;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  border: red solid;
   display: flex;
   flex-direction: column;
-  row-gap: 80px;
-  width: 100%;
+  justify-content: space-around;
+  //row-gap: 180px;
+  width: 90%;
+  height: 300px;
   max-width: 500px;
-  padding: 40px;
+  padding: 10px;
   color: var(--color-dark);
   background: var(--color-gray);
   border: var(--border);
@@ -19,6 +22,11 @@
 
   &__control {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    @include mobile-s {
+      flex-direction: column;
+      row-gap: 10px;
+    }
   }
 }
